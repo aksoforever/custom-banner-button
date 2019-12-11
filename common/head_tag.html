@@ -20,16 +20,16 @@
      api.onPageChange((url) => {
 
         // Check if we're on the homepage 
-        if (url === "/c/topic-list"){ 
-          // If it's the topic-list add the 'custom-banner' class to HTML tag
-          // and set 'displayCustombanner' to true
+        if (url === "/" || url === homeRoute ){ 
+          // If it's the homepage add the 'custom-homepage' class to HTML tag
+          // and set 'displayCustomHomepage' to true
           document.querySelector("html").classList.add("custom-banner"); 
-          component.set("displayCustombanner", true); 
+          component.set("displayCustomHomepage", true); 
         } else {  
           // If we're not on the homepage remove the class
           // and set `displayCustomHomepage` to false
           document.querySelector("html").classList.remove("custom-banner"); 
-          component.set("displayCustombanner", false); 
+          component.set("displayCustomHomepage", false); 
         }
       });
     }
