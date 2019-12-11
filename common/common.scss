@@ -5,4 +5,11 @@
   .below-site-header-outlet {
     padding-top: 6em;
   }
+  .custom-banner-wrapper{display: flex;
+  justify-content: flex-end;
+  background: $secondary-high;
+  padding: .5em 0;
+  button {
+    margin: .25em;
+  }}
 }
