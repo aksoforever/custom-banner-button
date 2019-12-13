@@ -1,7 +1,17 @@
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-banner">
   {{#if displayCustomBanner}} 
     <div class="custom-banner-wrapper wrap">
-    <button class="btn btn-primary"><svg class="fa d-icon d-icon-user-secret svg-icon svg-node" aria-hidden="true"><use xlink:href="#user-secret"></use></svg>Enter Anonymous Mode</button>
-    <button class="btn btn-danger"><svg class="fa d-icon d-icon-ban svg-icon svg-node" aria-hidden="true"><use xlink:href="#ban"></use></svg>Exit Anonymous Mode</button>    </div>
+    
+  {{#if this.currentUser}}
+  {{#if this.currentUser.is_anonymous}}
+    {{d-button class="btn-primary" action=(route-action 'toggleAnonymous') icon="ban" label="switch_from_anon"}}
+  {{else}}
+    {{d-button class="btn-primary" action=(route-action 'toggleAnonymous') icon="user-secret" label="switch_to_anon"}}
+  {{/if}}
+{{/if}}
+  
+  
+  
+  </div>
   {{/if}}
 </script>
