@@ -50,27 +50,18 @@
 }
 
 .banner-text {
-    button{
+    button, a{
     font-size:16px;
     background-color: transparent;
     color:#fff;
     padding:8px 25px;
     border:1px solid #fff;
     border-radius:25px;
-    margin-top:30px;
+    margin-top:15px;
     margin-left:20px;
     display:inline-block;
     }
-    a{
-    font-size:16px;
-    background-color: transparent;
-    color:#fff;
-    padding:8px 25px;
-    border:1px solid #fff;
-    border-radius:25px;
-    margin-top:30px;
-    display:inline-block;
-    }
+
     
 }
   .banner-text button{
