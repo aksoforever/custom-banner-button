@@ -48,7 +48,7 @@
     margin: 0;
 }
 
-.banner-text button {
+.banner-text button,a {
     font-size:16px;
     background-color: transparent;
     color:#fff;
@@ -58,8 +58,10 @@
     margin-top:30px;
     display:inline-block;
 }
-  
-.banner-text button:hover {
+  .banner-text button{
+    .d-icon{color:#fff;}
+  }
+.banner-text a,button:hover {
     background-color:#fff;
     color:#000;
 }
