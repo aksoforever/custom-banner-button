@@ -1,17 +1,19 @@
 <script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-banner-button">
   {{#if displayCustomBanner}} 
-    <div class="custom-banner-wrapper wrap">
-    
-  {{#if this.currentUser}}
-  {{#if this.currentUser.is_anonymous}}
-    {{d-button class="btn-primary" action=(route-action 'toggleAnonymous') icon="ban" label="switch_from_anon"}}
-  {{else}}
-    {{d-button class="btn-primary" action=(route-action 'toggleAnonymous') icon="user-secret" label="switch_to_anon"}}
-  {{/if}}
-{{/if}}
-  
-  
-  
-  </div>
+    <section class="top-banner-button">
+        <div class="banner-button">
+           <div class="banner-text">
+             <h1>这里是匿名版块!</h1>
+              <p>匿名为我们所有社区人员提供保护，也请大家文明使用此板块，让匿名能更好的为每一个员工服务。 </p>
+             {{#if this.currentUser}}
+               {{#if this.currentUser.is_anonymous}}
+                  {{d-button class="btn-primary" action=(route-action 'toggleAnonymous') icon="ban" label="switch_from_anon"}}
+               {{else}}
+                  {{d-button class="btn-primary" action=(route-action 'toggleAnonymous') icon="user-secret" label="switch_to_anon"}}
+               {{/if}}
+            {{/if}}
+          </div>
+      </div>
+    </section>
   {{/if}}
 </script>
