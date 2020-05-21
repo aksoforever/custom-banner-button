@@ -20,7 +20,7 @@
      api.onPageChange((url) => {
 
         // Check if we're on the homepage 
-        if (url === "/c/feedback/anonymous/25" ){ 
+        if (url === "I18n.t(themePrefix('anonymous_category'))" ){ 
           // If it's the homepage add the 'custom-homepage' class to HTML tag
           // and set 'displayCustomHomepage' to true
           document.querySelector("html").classList.add("custom-banner-button"); 
@@ -41,9 +41,9 @@
     <section class="top-banner-button">
         <div class="banner-button">
            <div class="banner-text">
-             <h1>这里是匿名版块!</h1>
-              <p>匿名为我们所有社区人员提供保护，也请大家文明使用此板块，让匿名能更好的为每一个员工服务。 </p>
-			   <a href="https://bbs.quectel.com/t/topic/86">查看详情</a>
+             <h1>{{theme-i18n "anonymous_banner_title"}}</h1>
+              <p>{{theme-i18n "anonymous_banner_description"}}</p>
+			   {{{theme-i18n "anonymous_banner_banner"}}}
 			  
              {{#if this.currentUser}}
                {{#if this.currentUser.is_anonymous}}
