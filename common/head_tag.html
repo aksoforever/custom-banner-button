@@ -5,7 +5,7 @@
     // Setting up our component
     setupComponent(args, component) {
 
-     // Next we're getting the site setting 'top_menu',
+// Next we're getting the site setting 'top_menu',
      // splitting the values into an array,
      // and adding a leading slash
      var topMenuRoutes = 
@@ -20,7 +20,7 @@
      api.onPageChange((url) => {
 
         // Check if we're on the homepage 
-        if (url === "/c/feedback/anonymous" ){ 
+        if (url === "/c/feedback/anonymous/25" ){ 
           // If it's the homepage add the 'custom-homepage' class to HTML tag
           // and set 'displayCustomHomepage' to true
           document.querySelector("html").classList.add("custom-banner-button"); 
@@ -33,7 +33,27 @@
         }
       });
     }
-    
   });
+</script>
 
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/custom-banner-button">
+  {{#if displayCustomBanner}} 
+    <section class="top-banner-button">
+        <div class="banner-button">
+           <div class="banner-text">
+             <h1>这里是匿名版块!</h1>
+              <p>匿名为我们所有社区人员提供保护，也请大家文明使用此板块，让匿名能更好的为每一个员工服务。 </p>
+			   <a href="https://bbs.quectel.com/t/topic/86">查看详情</a>
+			  
+             {{#if this.currentUser}}
+               {{#if this.currentUser.is_anonymous}}
+                  {{d-button action=(route-action 'toggleAnonymous') icon="ban" label="switch_from_anon"}}
+               {{else}}
+                  {{d-button action=(route-action 'toggleAnonymous') icon="user-secret" label="switch_to_anon"}}
+               {{/if}}
+            {{/if}}
+          </div>
+      </div>
+    </section>
+  {{/if}}
 </script>
