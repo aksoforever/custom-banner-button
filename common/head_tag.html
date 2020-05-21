@@ -20,7 +20,7 @@
      api.onPageChange((url) => {
 
         // Check if we're on the homepage 
-        if (url === "I18n.t(themePrefix('anonymous_category'))" ){ 
+        if (url === I18n.t(themePrefix('anonymous_category')) ){ 
           // If it's the homepage add the 'custom-homepage' class to HTML tag
           // and set 'displayCustomHomepage' to true
           document.querySelector("html").classList.add("custom-banner-button"); 
